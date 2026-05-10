@@ -1,0 +1,8 @@
+# robots.txt — Jannatun Naeem Tushar CV
+# https://jn-tushar.github.io/cv/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://jn-tushar.github.io/cv/sitemap.xml
