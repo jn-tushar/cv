@@ -1,401 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Jannatun Naeem Tushar</title>
-    <style>
-        @page {
-            margin: 0.75in;
-        }
-        
-        body {
-            font-family: 'Calibri', 'Arial', sans-serif;
-            line-height: 1.5;
-            color: #333;
-            max-width: 8.5in;
-            margin: 0 auto;
-            padding: 0.5in;
-            background: white;
-        }
-        
-        .header {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            border-bottom: 3px solid #2c3e50;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-        }
-        
-        .profile-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 8px;
-            object-fit: cover;
-            border: 3px solid #2c3e50;
-            flex-shrink: 0;
-        }
-        
-        .header-content {
-            flex: 1;
-            text-align: left;
-        }
-        
-        .header h1 {
-            margin: 0;
-            font-size: 26px;
-            color: #2c3e50;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-        }
-        
-        .header .tagline {
-            font-size: 14px;
-            color: #555;
-            font-style: italic;
-            margin: 5px 0;
-        }
-        
-        .contact-info {
-            font-size: 11px;
-            color: #555;
-            margin-top: 10px;
-            line-height: 1.8;
-        }
-        
-        .contact-info a {
-            color: #2c3e50;
-            text-decoration: none;
-            word-break: break-all;
-        }
-        
-        .contact-info .link-text {
-            font-size: 10px;
-            color: #2c3e50;
-        }
-        
-        .section {
-            margin-bottom: 18px;
-        }
-        
-        .section-title {
-            font-size: 15px;
-            font-weight: 700;
-            color: #2c3e50;
-            text-transform: uppercase;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 4px;
-            margin-bottom: 10px;
-            letter-spacing: 0.5px;
-        }
-        
-        .section-content {
-            font-size: 11.5px;
-            text-align: justify;
-        }
-        
-        .experience-item {
-            margin-bottom: 12px;
-        }
-        
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 4px;
-        }
-        
-        .job-title {
-            font-weight: 700;
-            color: #2c3e50;
-            font-size: 12px;
-        }
-        
-        .company {
-            font-style: italic;
-            color: #555;
-            font-size: 11.5px;
-        }
-        
-        .date {
-            font-size: 10.5px;
-            color: #666;
-            font-style: italic;
-        }
-        
-        .experience-item ul {
-            margin: 6px 0;
-            padding-left: 20px;
-        }
-        
-        .experience-item li {
-            margin-bottom: 4px;
-            line-height: 1.5;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 8px;
-        }
-        
-        .skill-item {
-            font-size: 11.5px;
-        }
-        
-        .skill-label {
-            font-weight: 700;
-            color: #2c3e50;
-        }
-        
-        .education-item {
-            margin-bottom: 8px;
-            font-size: 11.5px;
-        }
-        
-        .degree {
-            font-weight: 700;
-            color: #2c3e50;
-        }
-        
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-        
-        .reference-item {
-            font-size: 11px;
-            line-height: 1.6;
-        }
-        
-        .reference-name {
-            font-weight: 700;
-            color: #2c3e50;
-            font-size: 12px;
-        }
-        
-        .declaration {
-            font-size: 11px;
-            font-style: italic;
-            text-align: justify;
-            margin-top: 15px;
-        }
-        
-        @media print {
-            body {
-                padding: 0;
-            }
-            .section {
-                page-break-inside: avoid;
-            }
-        }
-        
-        .download-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #2c3e50;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 600;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            z-index: 1000;
-        }
-        
-        .download-btn:hover {
-            background: #34495e;
-        }
-        
-        @media print {
-            .download-btn {
-                display: none;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jannatun Naeem Tushar — CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B3A6B;
+    --navy-light: #2E5AAC;
+    --gray: #555555;
+    --light-gray: #f5f7fb;
+    --text: #222222;
+    --page-width: 860px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8edf5;
+    font-family: 'Source Sans 3', 'Calibri', sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  .page {
+    background: #ffffff;
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 52px 56px 56px;
+    box-shadow: 0 4px 40px rgba(27,58,107,0.13);
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+    gap: 20px;
+  }
+
+  .header-left { flex: 1; }
+
+  .name {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+
+  .tagline {
+    font-size: 14px;
+    color: var(--navy-light);
+    font-style: italic;
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+
+  .contact {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.8;
+  }
+
+  .contact a {
+    color: var(--navy-light);
+    text-decoration: none;
+  }
+
+  .photo {
+    width: 88px;
+    height: 104px;
+    object-fit: cover;
+    border: 2px solid #dde4f0;
+    flex-shrink: 0;
+  }
+
+  .photo-placeholder {
+    width: 88px;
+    height: 104px;
+    background: var(--light-gray);
+    border: 2px solid #dde4f0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: #aaa;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  /* Divider under header */
+  .header-divider {
+    border: none;
+    border-bottom: 2.5px solid var(--navy);
+    margin-bottom: 0;
+  }
+
+  /* ── SECTION ── */
+  .section {
+    margin-top: 22px;
+  }
+
+  .section-title {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 1.8px solid var(--navy-light);
+    margin-bottom: 14px;
+  }
+
+  /* ── PARAGRAPH TEXT ── */
+  .objective-text {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--text);
+  }
+
+  /* ── ENTRY ROW ── */
+  .entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 2px;
+  }
+
+  .entry-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    flex: 1;
+  }
+
+  .entry-year {
+    font-size: 12px;
+    color: var(--gray);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .entry-sub {
+    font-size: 11.5px;
+    color: var(--gray);
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  .entry-sub-italic {
+    font-size: 11.5px;
+    color: var(--gray);
+    font-style: italic;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  /* ── BULLETS ── */
+  .bullet-list {
+    list-style: none;
+    padding: 0;
+    margin: 4px 0 0;
+  }
+
+  .bullet-list li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text);
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 5px;
+  }
+
+  .bullet-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--navy-light);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* ── PERSONAL INFO ── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 5px 0;
+  }
+
+  .info-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .info-value {
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  /* ── REFERENCES ── */
+  .ref-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 40px;
+  }
+
+  .ref-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 3px;
+  }
+
+  .ref-detail {
+    font-size: 11.5px;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  /* ── DECLARATION ── */
+  .declaration {
+    margin-top: 36px;
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--gray);
+    font-style: italic;
+    padding-top: 16px;
+    border-top: 1px solid #dde4f0;
+  }
+
+  .sign-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .sign-date { color: var(--gray); }
+  .sign-name { font-weight: 700; color: var(--navy); }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; padding: 36px 44px; }
+  }
+
+  @media (max-width: 640px) {
+    .page { padding: 28px 20px; }
+    .name { font-size: 28px; }
+    .ref-grid { grid-template-columns: 1fr; gap: 16px; }
+    .info-grid { grid-template-columns: 140px 1fr; }
+  }
+</style>
 </head>
 <body>
-    <button class="download-btn" onclick="window.print()">📄 Download/Print as PDF</button>
-    
-    <div class="header">
-        <img src="https://i.imgur.com/6wP9aMO.png" alt="Profile Photo" class="profile-photo">
-        <div class="header-content">
-            <h1>Jannatun Naeem Tushar</h1>
-            <div class="tagline">Aspiring HR & Administrative Professional</div>
-            <div class="contact-info">
-                <strong>Address:</strong> Kazipara, Mirpur, Dhaka-1216 | <strong>Phone:</strong> +8801717916114<br>
-                <strong>Email:</strong> <a href="mailto:jntushar.jkkniu@gmail.com">jntushar.jkkniu@gmail.com</a><br>
-                <strong>LinkedIn:</strong> <span class="link-text">https://www.linkedin.com/in/jannatun-naeem-tushar</span><br>
-                <strong>Portfolio:</strong> <span class="link-text">https://jntushar.netlify.app</span>
-            </div>
-        </div>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <div class="name">Jannatun Naeem Tushar</div>
+      <div class="tagline">Educator, Demographer &amp; Debater</div>
+      <div class="contact">
+        +880 1568523563 &nbsp;|&nbsp; jntushar.jkkniu@gmail.com &nbsp;|&nbsp; West Kazipara, Mirpur, Dhaka<br>
+        <a href="https://linkedin.com/in/jannatun-naeem-tushar">linkedin.com/in/jannatun-naeem-tushar</a>
+      </div>
     </div>
+    <div class="photo-placeholder">Photo</div>
+  </div>
 
-    <div class="section">
-        <div class="section-title">Career Objective</div>
-        <div class="section-content">
-            <strong>Highly motivated and analytical professional</strong> with an MSS in Population Science, seeking a career-defining role as an <strong>HR Executive</strong> in a reputed multinational or domestic corporation. Aiming to leverage strong expertise in data management (STATA), employee engagement, and training coordination to contribute to organizational growth and workplace efficiency.
-        </div>
+  <hr class="header-divider">
+
+  <!-- CAREER OBJECTIVE -->
+  <div class="section">
+    <div class="section-title">Career Objective</div>
+    <p class="objective-text">
+      Highly motivated and analytical professional with an MSS in Population Science, seeking a career-defining role in a reputed multinational or domestic corporation. Equipped with strong research competencies, award-winning communication and leadership skills, and hands-on experience in training, community development, and academic content creation — I am committed to contributing meaningfully to any team I join.
+    </p>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <div class="section-title">Education</div>
+
+    <div class="entry">
+      <div class="entry-title">Master of Social Science (MSS) — Population Science</div>
+      <div class="entry-year">2023–2024</div>
     </div>
+    <div class="entry-sub">Jatiya Kabi Kazi Nazrul Islam University (JKKNIU), Mymensingh &nbsp;|&nbsp; CGPA: 3.13</div>
+    <div class="entry-sub-italic">Thesis: NCDs among Garment Workers in Gazipur</div>
 
-    <div class="section">
-        <div class="section-title">Career Summary</div>
-        <div class="section-content">
-            Completed <strong>BSS and MSS in Sociology/Population Science</strong> with a focus on human interaction and data-driven research. Possesses hands-on experience in <strong>coordinating large groups, delivering professional training, and managing complex documentation</strong>. Demonstrated leadership through founding academic platforms and executing national-level events.
-        </div>
+    <div class="entry">
+      <div class="entry-title">Bachelor of Social Science (BSS) — Population Science</div>
+      <div class="entry-year">2018–2023</div>
     </div>
+    <div class="entry-sub">Jatiya Kabi Kazi Nazrul Islam University (JKKNIU), Mymensingh &nbsp;|&nbsp; CGPA: 3.16</div>
+    <div class="entry-sub-italic">Thesis: Loneliness among Older Adults in Trishal</div>
 
-    <div class="section">
-        <div class="section-title">Specialized Area of Expertise</div>
-        <div class="section-content">
-            <ul style="margin: 8px 0; padding-left: 20px;">
-                <li><strong>HR Administration & Support:</strong> Skilled in maintaining accurate employee records, digital file management, and supporting day-to-day office operations with high confidentiality.</li>
-                <li><strong>Training & Development (L&D):</strong> Experienced in designing and delivering training programs to enhance staff performance and pedagogical skills.</li>
-                <li><strong>HR Analytics & Data Entry:</strong> Proficient in using STATA and MS Excel for employee data monitoring, attendance tracking, and reporting.</li>
-                <li><strong>Employee Engagement & Communication:</strong> Skilled in managing internal communications, organizing corporate events, and fostering a positive workplace culture.</li>
-                <li><strong>Recruitment & Onboarding Assistance:</strong> Capable of supporting the end-to-end recruitment process, from CV screening to employee orientation.</li>
-            </ul>
-        </div>
+    <div class="entry">
+      <div class="entry-title">Higher Secondary Certificate (HSC) — Science</div>
+      <div class="entry-year">2017</div>
     </div>
+    <div class="entry-sub-italic">Abdul Kadir Mollah City College, Narsingdi &nbsp;|&nbsp; Board: Dhaka &nbsp;|&nbsp; Group: Science &nbsp;|&nbsp; GPA: 4.58</div>
 
-    <div class="section">
-        <div class="section-title">Professional & Leadership Experience</div>
-        
-        <div class="experience-item">
-            <div class="experience-header">
-                <div>
-                    <div class="job-title">Guest Trainer</div>
-                    <div class="company">Gazipur Shaheen Cadet Academy</div>
-                </div>
-                <div class="date">Jan 2024 – Feb 2024</div>
-            </div>
-            <ul>
-                <li>Coordinated and delivered a <strong>month-long training program for 50+ staff members</strong> on presentation and communication skills.</li>
-                <li>Managed training schedules and prepared <strong>performance reports</strong> for the academy administration.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <div>
-                    <div class="job-title">Trainer | Presentation, Public Speaking & Debate</div>
-                </div>
-                <div class="date">2022 – 2024</div>
-            </div>
-            <ul>
-                <li>Conducted several workshops for university students to enhance their communication and presentation capabilities.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <div>
-                    <div class="job-title">Founder & Charter President</div>
-                    <div class="company">Population Science Debating Club (JKKNIU)</div>
-                </div>
-                <div class="date">2023 – 2024</div>
-            </div>
-            <ul>
-                <li>Led a student body of <strong>50+ members</strong>, overseeing recruitment, training, and strategic event planning.</li>
-                <li>Organized <strong>inter-department debate festivals and training workshops</strong>, managing budget coordination and stakeholder communication.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <div>
-                    <div class="job-title">Founder & Chief Organizer</div>
-                    <div class="company">Boiprahor Weekly Reading Circle</div>
-                </div>
-                <div class="date">2022 – 2023</div>
-            </div>
-            <ul>
-                <li>Led a group of <strong>30+ members</strong> to promote literacy and critical thinking through structured reading sessions.</li>
-            </ul>
-        </div>
+    <div class="entry">
+      <div class="entry-title">Secondary School Certificate (SSC) — Science</div>
+      <div class="entry-year">2015</div>
     </div>
+    <div class="entry-sub-italic">Barmi Bazar High School, Barmi, Sreepur, Gazipur &nbsp;|&nbsp; Board: Dhaka &nbsp;|&nbsp; Group: Science &nbsp;|&nbsp; GPA: 5.00</div>
+  </div>
 
-    <div class="section">
-        <div class="section-title">Academic Qualifications</div>
-        <div class="education-item">
-            <span class="degree">Master of Social Science (MSS) in Population Science</span><br>
-            Jatiya Kabi Kazi Nazrul Islam University (JKKNIU) | 2024 | <strong>CGPA: 3.13/4.00</strong>
-        </div>
-        <div class="education-item">
-            <span class="degree">Bachelor of Social Science (BSS) Honours in Population Science</span><br>
-            Jatiya Kabi Kazi Nazrul Islam University (JKKNIU) | 2023 | <strong>CGPA: 3.16/4.00</strong>
-        </div>
-        <div class="education-item">
-            <span class="degree">Higher Secondary Certificate (HSC) – Science</span><br>
-            Government Science College | 2017 | <strong>GPA: 4.58/5.00</strong>
-        </div>
-        <div class="education-item">
-            <span class="degree">Secondary School Certificate (SSC) – Science</span><br>
-            Dhaka Board | 2015 | <strong>GPA: 5.00/5.00</strong>
-        </div>
-    </div>
+  <!-- KEY SKILLS -->
+  <div class="section">
+    <div class="section-title">Key Skills &amp; Competencies</div>
+    <ul class="bullet-list">
+      <li>Exceptional verbal communication and structured presentation skills — developed through 6+ years of competitive parliamentary debate</li>
+      <li>Strong analytical and research skills — qualitative and quantitative methods, report writing, and data analysis</li>
+      <li>Ability to break down complex topics into clear, accessible language for diverse audiences</li>
+      <li>Skilled in MS Word, MS Excel, MS PowerPoint, and STATA 17</li>
+      <li>Experience in training facilitation, content development, and curriculum structuring</li>
+      <li>Bilingual fluency: Bangla and English</li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <div class="section-title">Technical Skills</div>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <span class="skill-label">Tools:</span> <strong>STATA 17, MS Office Suite</strong> (Word, PowerPoint, Excel), Google Docs, Google Sheets, AI Prompt Engineering, Vibe Coding
-            </div>
-            <div class="skill-item">
-                <span class="skill-label">Soft Skills:</span> <strong>Strategic Problem-Solving, Team Collaboration, Conflict Resolution</strong>
-            </div>
-        </div>
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">Experience</div>
+    <div class="entry">
+      <div class="entry-title">Guest Trainer — Gazipur Shaheen Cadet Academy</div>
+      <div class="entry-year">2024</div>
     </div>
+    <div class="entry-sub-italic">Kandipara, Gaffargaon, Mymensingh &nbsp;|&nbsp; Coordinated and delivered a month-long training program for 50+ teaching staff on pedagogy and presentation skills</div>
+  </div>
 
-    <div class="section">
-        <div class="section-title">Awards & Achievements</div>
-        <div class="section-content">
-            <ul style="margin: 8px 0; padding-left: 20px;">
-                <li><strong>Champion:</strong> Youth Democracy Debate Festival | Organized by USAID & UKAID</li>
-                <li><strong>Top 20:</strong> National Writing Competition on Post-COVID-19 Recovery | Government of Bangladesh</li>
-            </ul>
-        </div>
-    </div>
+  <!-- ACHIEVEMENTS -->
+  <div class="section">
+    <div class="section-title">Achievements &amp; Leadership</div>
 
-    <div class="section">
-        <div class="section-title">Personal Information</div>
-        <div class="section-content">
-            <strong>Date of Birth:</strong> 21 September 1999<br>
-            <strong>Permanent Address:</strong> Barmi, Sreepur, Gazipur<br>
-            <strong>Current Location:</strong> Kazipara, Mirpur, Dhaka
-        </div>
+    <div class="entry">
+      <div class="entry-title">Champion — Youth Democracy Debate Festival (Mymensingh Region)</div>
+      <div class="entry-year">2019</div>
     </div>
+    <div class="entry-sub-italic">Organized by USAID &amp; UKAID &nbsp;|&nbsp; Parliamentary debate, Bangla medium</div>
 
-    <div class="section">
-        <div class="section-title">Reference</div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-            <div class="reference-item">
-                <div class="reference-name">Md. Nuruzzaman Khan, PhD</div>
-                Assistant Professor<br>
-                Department of Population Science<br>
-                Jatiya Kabi Kazi Nazrul Islam University (JKKNIU)<br>
-                <strong>Email:</strong> sumonrupop@gmail.com<br>
-                <strong>Phone:</strong> 01737-151554
-            </div>
-            <div class="reference-item">
-                <div class="reference-name">Md. Syful Islam</div>
-                Lecturer<br>
-                Department of Population Science<br>
-                University of Dhaka<br>
-                <strong>Email:</strong> syful111@gmail.com<br>
-                <strong>Phone:</strong> 01854-948713
-            </div>
-        </div>
+    <div class="entry">
+      <div class="entry-title">Top 20 — National Post-Covid Recovery Writing Competition</div>
+      <div class="entry-year">2020</div>
     </div>
+    <div class="entry-sub-italic">Government of Bangladesh &nbsp;|&nbsp; National-level recognition</div>
 
-    <div class="declaration">
-        <strong>Declaration:</strong> I affirm that the details provided in this resume are complete, accurate, and presented with full integrity to the best of my knowledge.
+    <div class="entry">
+      <div class="entry-title">Founder — Population Science Debating Club, JKKNIU</div>
+      <div class="entry-year">2023–2024</div>
     </div>
+    <div class="entry-sub-italic">Organized academic discussions, moderated debate sessions, and guided junior members in improving their communication and presentation skills</div>
+
+    <div class="entry">
+      <div class="entry-title">Founder — Boiprahor Weekly Reading Circle, JKKNIU</div>
+      <div class="entry-year">2022–2023</div>
+    </div>
+    <div class="entry-sub-italic">Led a weekly literary discussion group promoting reading culture among university students</div>
+  </div>
+
+  <!-- RESEARCH -->
+  <div class="section">
+    <div class="section-title">Research &amp; Academic Experience</div>
+    <ul class="bullet-list">
+      <li>MSS Thesis: Prevalence and determinants of Non-Communicable Diseases (NCDs) among garment factory workers in Gazipur, Bangladesh (Supervisor: Dr. Md. Nuruzzaman Khan)</li>
+      <li>Honours Thesis: The effects of loneliness on physical and mental health outcomes in older adults in Trishal Upazila, Mymensingh District (Supervisor: Ms. Shila Sarkar)</li>
+      <li>Research workshop participant — JKKNIU, 2022 and 2023 (qualitative and quantitative methods)</li>
+      <li>Proficient in statistical software: STATA 17</li>
+    </ul>
+  </div>
+
+  <!-- PERSONAL INFO -->
+  <div class="section">
+    <div class="section-title">Personal Information</div>
+    <div class="info-grid">
+      <div class="info-label">Date of Birth:</div>
+      <div class="info-value">21 September 1999</div>
+      <div class="info-label">Nationality:</div>
+      <div class="info-value">Bangladeshi</div>
+      <div class="info-label">Permanent Address:</div>
+      <div class="info-value">Barmi, Sreepur, Gazipur</div>
+      <div class="info-label">Current Address:</div>
+      <div class="info-value">West Kazipara, Mirpur, Dhaka</div>
+      <div class="info-label">Interests:</div>
+      <div class="info-value">Reading, Parliamentary Debate, Chess, Bengali Literature</div>
+    </div>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="section">
+    <div class="section-title">References</div>
+    <div class="ref-grid">
+      <div>
+        <div class="ref-name">Md. Nuruzzaman Khan, PhD</div>
+        <div class="ref-detail">
+          Assistant Professor<br>
+          Department of Population Science<br>
+          Jatiya Kabi Kazi Nazrul Islam University (JKKNIU)<br>
+          Email: sumonrupop@gmail.com<br>
+          Phone: 01737-151554
+        </div>
+      </div>
+      <div>
+        <div class="ref-name">Md. Syful Islam</div>
+        <div class="ref-detail">
+          Lecturer<br>
+          Department of Population Science<br>
+          University of Dhaka<br>
+          Email: syful111@gmail.com<br>
+          Phone: 01854-948713
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DECLARATION -->
+  <div class="declaration">
+    <div>I hereby declare that all information provided above is true and correct to the best of my knowledge.</div>
+    <div class="sign-row">
+      <span class="sign-date">Date: May 2026</span>
+      <span class="sign-name">Jannatun Naeem Tushar</span>
+    </div>
+  </div>
+
+</div>
 </body>
-</html>
+        </html>
